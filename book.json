@@ -1,0 +1,33 @@
+{
+    "title": "Contensis JS Delivery API",
+    "links": {
+      "sidebar": {
+          "Development Home": "https://zenhub.zengenti.com/Contensis/9/development/Contensis-development.aspx"
+      }
+    },
+    "plugins": [
+      "-sharing",
+      "fontsettings",
+      "-highlight",
+      "prism",
+      "ga"
+    ],
+    "pluginsConfig": {
+      "fontsettings": {
+        "theme": "white",
+        "family": "sans",
+        "size": 2
+      },
+      "prism": {
+        "css": [
+          "prismjs/themes/prism-okaidia.css"
+        ],
+        "lang": {
+          "json": "json"
+        }
+      },
+      "ga": {
+        "token": "UA-96163335-1"
+      }
+    }
+}

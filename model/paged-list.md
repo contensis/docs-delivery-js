@@ -6,7 +6,7 @@ A paged list is a structure that is used to describe paging details for listing 
 | Name | Type | Format | Description |
 | :------- | :--- | :----- | :---------- |
 | pageIndex | number | int | The index of the result set to return |
-| pageSize | number | int | The size of the result set to return |
+| pageSize | number | int | The size of the result set to return. The default is 25 |
 | totalCount | number | int | The total number of results available |
 | items | object [...] |  | A container for the items being returned |
 

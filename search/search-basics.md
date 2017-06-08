@@ -10,9 +10,9 @@ A query tree structure, along with order and paging specifiers, allows a search 
 - [Complete example](#complete-example)
 
 ```js
-**search(query: Query): Promise&lt;PagedList&lt;Entry&gt;&gt;**
+search(query: Query): Promise<PagedList<Entry>>
 
-**search(query: Query, linkDepth: number): Promise&lt;PagedList&lt;Entry&gt;&gt;**
+search(query: Query, linkDepth: number): Promise<PagedList<Entry>>
 ```
 
 ## Query

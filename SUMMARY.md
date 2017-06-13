@@ -18,6 +18,7 @@
 * [Project](model/project.md)
 * [Content type](model/content-type.md)
 * [Entry](model/entry.md)
+* [Entry get options](model/entry-get-options.md)
 * [Entry list options](model/entry-list-options.md)
 * [Version](model/version.md)
 * [Paged list](model/paged-list.md)

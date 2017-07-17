@@ -10,7 +10,8 @@
       "fontsettings",
       "-highlight",
       "prism",
-      "ga"
+      "ga",
+      "scripts"
     ],
     "pluginsConfig": {
       "fontsettings": {
@@ -28,6 +29,12 @@
       },
       "ga": {
         "token": "UA-96163335-1"
+      },
+      "scripts": {
+        "files": [
+          "./scripts/fetch.min.js",
+          "./scripts/api-docs.js"
+        ]
       }
     }
 }

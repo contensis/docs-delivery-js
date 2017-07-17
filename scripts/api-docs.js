@@ -2,29 +2,18 @@
     var urlRoot = "/contensis/api/delivery/js/"
     var version = 'beta'
 
-    var cookieName = 'api_docs_version';
     var versions = [];
     var select;
     var config;
 
     var getConfig = function() {
-        var configUrl;
-        if (window.location.pathname.indexOf('localhost') >= 0) {
-            configUrl = "/config.json";
-        } else {
-            configUrl = urlRoot + 'config.json';
-        }
-
-        return fetch(configUrl).then(function(response) {
+        return fetch("/config.json").then(function(response) {
             return response.json();
         });
     };
 
     var renderOptions = function() {
-        var selectedVersion = getCookie(cookieName);
-        if (selectedVersion === '') {
-            selectedVersion = version;
-        }
+        var pageVersion = getPageVersion();
 
         for(var i = select.options.length - 1 ; i >= 0 ; i--)
         {
@@ -32,15 +21,15 @@
         }
 
         // Add defaults
-        addSelectOption('Latest (' + config.latestVersion + ')', config.latestVersion, selectedVersion === config.latestVersion);
-        addSelectOption('Beta', 'beta', selectedVersion === 'beta');
+        addSelectOption(config.latestVersion + ' (latest)', config.latestVersion, pageVersion === config.latestVersion);
         
         var ordered = versions.sort(function(a, b){return b-a});
         for (var index = 0; index < ordered.length; index++) {
             var element = ordered[index];
-            
-            addSelectOption(element, element, selectedVersion === element);
+            addSelectOption(element, element, pageVersion === element);
         }
+
+        addSelectOption('Beta', 'beta', pageVersion === 'beta');
     };
 
     var addSelectOption = function(text, value, selected) {
@@ -78,7 +67,6 @@
         return fetch(getPageVersionUrl(version), options).then(function(response){
             return response.ok;
         }).catch(function(){
-            console.log('Version does not exist: ' + version);
             return false;
         })
     };
@@ -103,8 +91,6 @@
             return;
         }
 
-        setCookie(cookieName, version);
-        console.log(urlRoot);
         window.location.href = getPageVersionUrl(version);
     };
 
@@ -130,54 +116,28 @@
         discoverVersions(config);
     };
 
-    var setCookie = function setCookie(cname, cvalue) {
-        document.cookie = cname + "=" + cvalue + ";path=/";
-    };
+    var getPageVersion = function() {
+        var pageVersion = version;
+        var url = window.location.pathname.replace(urlRoot, '');
 
-    var getCookie = function getCookie(cname) {
-        var name = cname + "=";
-        var decodedCookie = decodeURIComponent(document.cookie);
-        var ca = decodedCookie.split(';');
-        for(var i = 0; i <ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') {
-                c = c.substring(1);
-            }
-            if (c.indexOf(name) == 0) {
-                return c.substring(name.length, c.length);
-            }
-        }
-        return "";
-    };
-
-    var ensureVersion = function() {
-        var storedVersion = getCookie(cookieName);
-        if (storedVersion === "") {
-            console.log("none");
-            return;
+        var parts = url.split('/');
+        if (parts.length > 1 && parts[0].toLowerCase() === 'v') {
+            pageVersion = parts[1];
         }
 
-        if (window.location.pathname.indexOf(storedVersion) < 0) {
-            console.log("Should navigate to " + storedVersion);
-            //navigateToVersion(storedVersion);
-        }
+        return pageVersion;
     };
-
 
     var init = function() {
         select = null;
         versions = [];
 
-        //determineUrlRoot();
-
         if (config == null) {
             getConfig().then(function(c){
                 config = c;
-                ensureVersion();
                 createSelect();
             });
         } else {
-            ensureVersion();
             createSelect();
         }
     };

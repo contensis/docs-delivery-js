@@ -1,6 +1,6 @@
 (function(){
-    var urlRoot = "/contensis/api/delivery/js/"
-    var version = 'beta'
+    var urlRoot = "/contensis/api/delivery/js/";
+    var version = "9.2";
 
     var versions = [];
     var select;
@@ -21,7 +21,7 @@
         }
 
         // Add defaults
-        addSelectOption(config.latestVersion + ' (latest)', config.latestVersion, pageVersion === config.latestVersion);
+        addSelectOption(config.latestVersion + " (latest)", config.latestVersion, pageVersion === config.latestVersion);
         
         var ordered = versions.sort(function(a, b){return b-a});
         for (var index = 0; index < ordered.length; index++) {
@@ -54,15 +54,15 @@
                     addVersion(version);
                 }
             }).catch(function() {
-                console.log('Version does not exist: ' + version);
+                console.log("Version does not exist: " + version);
             });
         }, this);
     };
 
     var checkVersionExists = function(version) {
         var options = {
-            method: 'HEAD',
-            mode: 'no-cors'
+            method: "HEAD",
+            mode: "no-cors"
         }
         return fetch(getPageVersionUrl(version), options).then(function(response){
             return response.ok;
@@ -72,16 +72,16 @@
     };
 
     var getPageVersionUrl = function(version) {
-        var url = window.location.pathname.replace(urlRoot, '');
+        var url = window.location.pathname.replace(urlRoot, "");
 
-        var parts = url.split('/');
-        if (parts[0] === 'v') {
+        var parts = url.split("/");
+        if (parts[0] === "v") {
             parts.shift();
             parts.shift();
-            url = parts.join('/');
+            url = parts.join("/");
         }
 
-        url = urlRoot + 'v/' + version + '/' +  url;
+        url = urlRoot + "v/" + version + "/" +  url;
         console.log(url);
         return url;
     };
@@ -120,8 +120,8 @@
         var pageVersion = version;
         var url = window.location.pathname.replace(urlRoot, '');
 
-        var parts = url.split('/');
-        if (parts.length > 1 && parts[0].toLowerCase() === 'v') {
+        var parts = url.split("/");
+        if (parts.length > 1 && parts[0].toLowerCase() === "v") {
             pageVersion = parts[1];
         }
 

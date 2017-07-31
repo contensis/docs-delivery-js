@@ -25,8 +25,8 @@
 * [Version](/model/version.md)
 * [Paged list](/model/paged-list.md)
 * [Taxonomy node](/model/taxonomy-node.md)
-    * [TaxonomGetNodeByKeyOptions](/model/taxonomy-get-node-by-key-options.md)
-    * [TaxonomGetNodeByPathOptions](/model/taxonomy-get-node-by-path-options.md)
+    * [TaxonomyGetNodeByKeyOptions](/model/taxonomy-get-node-by-key-options.md)
+    * [TaxonomyGetNodeByPathOptions](/model/taxonomy-get-node-by-path-options.md)
     * [TaxonomyResolveChildrenOptions](/model/taxonomy-resolve-children-options.md)
 ---
 * [Asset](/model/asset.md)

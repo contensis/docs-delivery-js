@@ -100,11 +100,10 @@
 
     var createSelect = function() {
         var header = document.getElementsByClassName("book-header")[0];
-        header.getElementsByTagName("h1")[0].remove();
+        header.removeChild(header.getElementsByTagName("h1")[0]);
 
         var div = document.createElement("div");
         select = document.createElement("select");
-        select.setAttribute("id", "soflow");
         select.addEventListener('change', onSelectChange);
 
         div.appendChild(select);
@@ -114,6 +113,11 @@
 
         renderOptions();
         discoverVersions(config);
+    };
+
+    var setDevHomeLink = function() {
+        var link = document.getElementsByClassName("custom-link")[0];
+        link.setAttribute("href", config.devHome);
     };
 
     var getPageVersion = function() {
@@ -135,6 +139,7 @@
         if (config == null) {
             getConfig().then(function(c){
                 config = c;
+                setDevHomeLink();
                 createSelect();
             });
         } else {
@@ -144,3 +149,5 @@
 
     gitbook.events.bind("page.change", init);
 })();
+
+ES6Promise.polyfill();

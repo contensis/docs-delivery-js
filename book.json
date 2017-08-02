@@ -4,7 +4,7 @@
       "sidebar": {
         "Development Home": "#",
         "HTTP Delivery API": "/contensis/api/delivery/http/",
-        ".NET Delivery API": "/contensis/api/delivery/js/"
+        ".NET Delivery API": "/contensis/api/delivery/dotnet/"
       }
     },
     "plugins": [

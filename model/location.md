@@ -7,7 +7,7 @@ The location object represents a geographical coordinate that specifies the posi
 | Name | Type | Format | Description |
 | :------- | :--- | :-- | :---------- |
 | lat | number | | The north-south position |
-| lng | number | | The east-west position |
+| lon | number | | The east-west position |
 
 ## Example
 ```html
@@ -28,11 +28,11 @@ The location object represents a geographical coordinate that specifies the posi
             // get the filming location of the film 
             var filmingLocation = film.filmingLocation;
 
-            // combine lat/lng into a string
-            var latLng = filmingLocation.lat + ',' + filmingLocation.lng;
+            // combine lat/lon into a string
+            var latLon = filmingLocation.lat + ',' + filmingLocation.lon;
 
             // Use Google map API to generate a map image 
-            var imgUrl = "https://maps.googleapis.com/maps/api/staticmap?center=" + latLng + "&zoom=14&size=400x300&sensor=false";
+            var imgUrl = "https://maps.googleapis.com/maps/api/staticmap?center=" + latLon + "&zoom=14&size=400x300&sensor=false";
 
             $('<img />')                // create an image element
                 .attr('src', imgUrl)    // set the src of the image to the Google map

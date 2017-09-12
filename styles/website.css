@@ -1,3 +1,12 @@
+.markdown-section h1,
+.markdown-section h2,
+.markdown-section h3,
+.markdown-section h4,
+.markdown-section h5,
+.markdown-section h6 {
+  margin-bottom: 0;
+}
+
 .markdown-section code,
 .markdown-section pre>code {
   font-size: 1em;
@@ -106,4 +115,8 @@ background-color: #e09d43;
   position: relative;
   font-size: 14px;
   padding: 10px;
+}
+
+th:empty {
+  display: none;
 }

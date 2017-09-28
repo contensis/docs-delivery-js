@@ -46,7 +46,7 @@ This example demonstrates a simple search with default ordering and paging optio
 
 
 ## Sub-queries
-A sub-query is a query within another query that is used as a condition to further restrict the results. Effectively they are defined by an explicit nesting of [logical operators](/query-operators.md#logical-operators).
+A sub-query is a query within another query that is used as a condition to further restrict the results. Effectively they are defined by an explicit nesting of [logical operators](query-operators.md#logical-operators).
 
 This example demonstrates a simple search with a sub-query.
 

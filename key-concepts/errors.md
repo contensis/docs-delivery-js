@@ -1,3 +1,6 @@
+---
+description: Status codes and error responses you can encounter when using the API.
+---
 # Errors
 
 Status codes and error responses you can encounter when using the API.

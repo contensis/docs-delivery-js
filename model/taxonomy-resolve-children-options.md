@@ -1,3 +1,6 @@
+---
+description: A structure that supports multiple configuration options for requesting taxonomy nodes.
+---
 # TaxonomyResolveChildrenOptions
 
 A structure that supports multiple configuration options for resolving taxonomy nodes.

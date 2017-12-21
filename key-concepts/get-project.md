@@ -1,3 +1,6 @@
+---
+description: Requesting the current project can be achieved by using the get method on the client's project property.
+---
 # Get the current project
 
 Requesting the current project can be achieved by using the get method on the client's project property.

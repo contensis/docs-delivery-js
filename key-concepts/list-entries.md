@@ -1,3 +1,6 @@
+---
+description: Requesting all entries for a content type can be achieved by using the list method on the client's entries property.
+---
 # Get a list of all entries by content type
 Requesting all entries for a content type can be achieved by using the list method on the client's entries property.
 

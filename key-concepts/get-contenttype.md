@@ -1,3 +1,6 @@
+---
+description: Requesting an individual content type can be achieved by using the get method on the client's contentTypes property.
+---
 # Get a single content type
 
 Requesting an individual content type can be achieved by using the get method on the client's contentTypes property.

@@ -1,3 +1,6 @@
+---
+description: An asset is an extension of an entry, with pre-defined fields and additional properties containing details about the file they represent. 
+---
 # Assets
 
 An asset is an extension of an [entry](/model/entry.md), with pre-defined fields and additional properties containing details about the file they represent. An asset is an entry with a dataFormat value equal to *asset*, which allows them to be identified and queried independently to entries.

@@ -1,3 +1,6 @@
+---
+description: An image type is a container of an image asset with an associated caption.
+---
 # Image
 An image type is a container of an image asset with an associated caption.
 

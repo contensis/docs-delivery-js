@@ -1,3 +1,6 @@
+---
+description: A structure that supports multiple configuration options for requesting taxonomy nodes.
+---
 # TaxonomyGetNodeByPathOptions
 
 A structure that supports multiple configuration options for requesting taxonomy nodes.

@@ -1,3 +1,6 @@
+---
+description: The version object contains the version status information for the current version of the resource.
+---
 # Version
 The version object contains the version status information for the current version of the resource.
 

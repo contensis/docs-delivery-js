@@ -1,3 +1,6 @@
+---
+description: The data format property is used as an extension of a data type to describe the structure and intent of the data.
+---
 # Data formats
 
 The data format property is used as an extension of a [data type](/key-concepts/data-types.md) to describe the structure and intent of the data. For example, a *location* has a data type of *object*, and a data format of *location*. Another example is a HTML block, which has a data type of *string* and a data format of *html*.  

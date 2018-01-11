@@ -1,3 +1,6 @@
+---
+description: Entry List Options is a structure that is used to describe details for requesting entry listing results.
+---
 # Entry List Options
 
 Entry List Options is a structure that is used to describe details for requesting entry listing results.

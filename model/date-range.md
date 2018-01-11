@@ -1,3 +1,6 @@
+---
+description: The date range object represents a start and end point in time.
+---
 # Date range
 
 The date range object represents a start and end point in time.

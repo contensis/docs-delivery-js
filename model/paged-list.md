@@ -3,17 +3,14 @@
 A paged list is a structure that is used to describe paging details for listing and search results.
 
 ## Properties
-
 | Name | Type | Format | Description |
 | :------- | :--- | :----- | :---------- |
 | pageIndex | number | int | The index of the result set to return |
 | pageSize | number | int | The size of the result set to return. The default is 25 |
 | totalCount | number | int | The total number of results available |
-| pageCount | number | int | The calculated page count based on the totalCount and pageSize |
 | items | object [...] |  | A container for the items being returned |
 
 ## Example
-
 The paged list properties provide the information required to implement paging.
 
 ```html
@@ -49,9 +46,11 @@ The paged list properties provide the information required to implement paging.
                 $('#film_list').append($('<li />').text(film.title));
             }
 
+            // calculate the total number of pages
+            var pageCount = Math.ceil(listOfFilms.totalCount / listOfFilms.pageSize);
             // empty the pager list
             $('#film_pager').empty();
-            for (var iPage = 1; iPage <= listOfFilms.pageCount; iPage++) {               
+            for (var iPage = 1; iPage <= pageCount; iPage++) {               
                 // create a link
                 var link = $('<a />')
                             .text(iPage)

@@ -1,6 +1,6 @@
 (function(){
     var urlRoot = "/contensis/api/delivery/js/"
-    var version = 'beta'
+    var version = '11.0'
 
     var renderVersionSelectorScript = function() {
         var element = document.createElement("script");

@@ -120,6 +120,13 @@ The *entryTitle* field is a dynamic value, determined by the *EntryTitleField* v
 ### Data fields
 Fields defined in the content type for the entry can be accessed by their API id.
 
+## Limiting fields
+The fields returned in entries can be limited to reduce the payload. Any fields specified are carried over into linked entries if specifying a linkDepth.
+
+```js
+query.fields = ['entryTitle', 'description'];
+```
+
 ## Complete example
 ```js
 (function(Zengenti) {
@@ -137,6 +144,7 @@ Fields defined in the content type for the entry can be accessed by their API id
     query.orderBy = OrderBy.asc('title').desc('releaseDate');
     query.pageSize = 50;
     query.pageIndex = 1;
+    query.fields = ['entryTitle', 'tagline', 'releaseDate'];
 
     client.entries.search(query).then(function(films) {
         // films are available

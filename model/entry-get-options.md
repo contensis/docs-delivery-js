@@ -8,6 +8,7 @@ Entry Get Options is a structure that is used to describe details for requesting
 | id | string | The id of the entry | 
 | language | string | The language variation to return for each entry |
 | linkDepth | number | The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
+| fields | string [...] | An array of field ids to restrict the fields returned for an entry |
 
 ## Example
 ```html
@@ -24,7 +25,7 @@ Entry Get Options is a structure that is used to describe details for requesting
         var movieId = 'd11315cb-4278-455b-84bb-04698db0ebd2';   
 
         // Get the French variation of the film with a link depth of 2
-        client.entries.get( { id: movieId, language: 'fr-fr', linkDepth: 2 }).then(function(film) {
+        client.entries.get( { id: movieId, language: 'fr-fr', linkDepth: 2, fields: ['title', 'overview'] }).then(function(film) {
             // display the film's title and overview
             $('#film_title').text(film.title);
             $('#film_overview').text(film.overview);

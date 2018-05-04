@@ -6,11 +6,11 @@ Entry List Options is a structure that is used to describe details for requestin
 | Name | Type | Description |
 | :------- | :--- | :----- | :---------- |
 | contentTypeId | string | The id of the content type | 
-| language | string | The language variation to return for each entry |
-| pageOptions | PageOptions | An object specifying the pageSize and pageIndex |
-| order | string [...] | An array of field ids to order the results by. Descending order is specified using a prefixed '-' |
-| linkDepth | number | The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
 | fields | string [...] | An array of field ids to restrict the fields returned for an entry |
+| language | string | The language variation to return for each entry |
+| linkDepth | number | The depth at which to resolve the full entry data for a linked entry or asset, with a maximum depth value of 10 |
+| order | string [...] | An array of field ids to order the results by. Descending order is specified using a prefixed '-' |
+| pageOptions | PageOptions | An object specifying the pageSize and pageIndex |
 
 ## Example
 ```html

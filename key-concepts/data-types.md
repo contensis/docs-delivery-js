@@ -1,3 +1,6 @@
+---
+description: A data type is the storage type for a field, and determines how the field data is validated and indexed for search.
+---
 # Data types
 
 A data type is the storage type for a field, and determines how the field data is validated and indexed for search.

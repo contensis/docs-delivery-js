@@ -1,3 +1,6 @@
+---
+description: Requesting an individual entry can be achieved by using the get method on the client's entries property. 
+---
 # Get a single entry
 Requesting an individual entry can be achieved by using the get method on the client's entries property.
 

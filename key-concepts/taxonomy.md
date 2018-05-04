@@ -1,3 +1,6 @@
+---
+description: Taxonomy nodes can be retrieved using the following methods, either by key or by path.
+---
 # Taxonomy
 
 Taxonomy nodes can be retrieved using the following methods, either by key or by path. The localization can be included as a parameter to determine the language the nodes should be returned as. The order by default is set to 'Defined', which is the order set in the UI, but an order of 'Alphabetical' can also be set. 

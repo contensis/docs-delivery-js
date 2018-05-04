@@ -1,3 +1,6 @@
+---
+description: Entry Get Options is a structure that is used to describe details for requesting an entry.
+---
 # Entry Get Options
 
 Entry Get Options is a structure that is used to describe details for requesting an entry.

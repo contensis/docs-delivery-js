@@ -1,3 +1,6 @@
+---
+description: The composed field type contains the data that the composer editor defines.
+---
 # Composed
 
 The composed field type contains the data that the [composer editor](https://zenhub.zengenti.com/Contensis/9/kb/content-types-and-entries/field-editors/composer.aspx) defines. It is an array of objects which expose *type* and *value* properties. The *type* property is a name given to an *allowed field type validation* defined in the content type that the entry is based on. The *value* contains the data for the field.

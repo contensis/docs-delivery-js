@@ -1,8 +1,11 @@
 {
     "title": "Contensis JS Delivery API",
+    "language": "en-GB",
     "links": {
       "sidebar": {
-          "Development Home": "https://zenhub.zengenti.com/Contensis/9/development/Contensis-development.aspx"
+        "Development Home": "#",
+        "HTTP Delivery API": "/contensis/api/delivery/http/",
+        ".NET Delivery API": "/contensis/api/delivery/dotnet/"
       }
     },
     "plugins": [
@@ -32,6 +35,7 @@
       },
       "scripts": {
         "files": [
+          "./scripts/es6-promise.min.js",
           "./scripts/fetch.min.js",
           "./scripts/api-docs.js"
         ]

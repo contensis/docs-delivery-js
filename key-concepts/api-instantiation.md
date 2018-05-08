@@ -1,4 +1,4 @@
-## Registering the Client
+# Registering the Client
 
 The javascript client and it’s required files can be registered in razor
 
@@ -6,15 +6,18 @@ The javascript client and it’s required files can be registered in razor
 
 
 ## Global Object
+
 Objects for using the client are found on the Global Object:
 
 `Zengenti.Contensis`
 
 
 ## Configuring the client
+
 The default configuration for Client's is set already when the Api is registered on a page. The configuration code is automatically set to reflect the context of the publishing server, ensuring that the correct service root url, project API id and version status (Published or Latest) are set.
 
 This be overridden globally
+
 ```js
 (function(Zengenti) {
     // set the default configuration for all clients
@@ -32,6 +35,7 @@ This be overridden globally
 All the configuration fields are optional and the default will be used if not overridden
 
 ## Creating the client
+
 All operations for the API hang off the ContensisClient type, which is created using the static method Zengenti.Contensis.Client.Create(). The Create() method allows parts of the Default configuration to be partially or completely overridden for that instance.
 
 ```js

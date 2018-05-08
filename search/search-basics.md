@@ -1,17 +1,17 @@
 ---
-description: A query tree structure, along with order and paging specifiers, allows a search to be performed against indexed documents held in ElasticSearch. 
+description: A query tree structure, along with order and paging specifiers, allows a search to be performed against indexed documents held in ElasticSearch.
 ---
 # Search
 
 A query tree structure, along with order and paging specifiers, allows a search to be performed against indexed documents held in ElasticSearch. The query API allows any required sub-query structure to be defined and a comprehensive selection of Operators enable individual field level evaluation.
 
-- [Query](#query)
-- [Sub-queries](#sub-queries)
-- [Ordering](#ordering)
-- [Paging](#paging)
-- [Weighting](#weighting)
-- [Specifying fields](#specifying-fields)
-- [Complete example](#complete-example)
+* [Query](#query)
+* [Sub-queries](#sub-queries)
+* [Ordering](#ordering)
+* [Paging](#paging)
+* [Weighting](#weighting)
+* [Specifying fields](#specifying-fields)
+* [Complete example](#complete-example)
 
 ```js
 search(query: Query): Promise<PagedList<Entry>>

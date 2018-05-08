@@ -1,7 +1,8 @@
 ---
-description: An entry definition in the Delivery API contains a mixture of standard properties and properties that have been defined by the content type that an entry is based on. 
+description: An entry definition in the Delivery API contains a mixture of standard properties and properties that have been defined by the content type that an entry is based on.
 ---
 # Entries
+
 An entry definition in the Delivery API contains a mixture of standard properties and properties that have been defined by the content type that an entry is based on.
 
 ## Data properties
@@ -14,24 +15,23 @@ These are the standard properties that all entries have. The language property i
 
 ### Entry
 
-| Name | Type | Format | Description |
-| :------- | :--- | :----- | :---------- |
-| field id | Any | Any | Field data that is defined in the associated [content type](/model/content-type.md#field). The data is keyed by a unique field id.  |
-| sys | object | [Sys](#sys) | The container of the entry system data |
+| Name     | Type   | Format      | Description                                                                                                                        |
+| :------- | :----- | :---------- | :--------------------------------------------------------------------------------------------------------------------------------- |
+| field id | Any    | Any         | Field data that is defined in the associated [content type](/model/content-type.md#field). The data is keyed by a unique field id. |
+| sys      | object | [Sys](#sys) | The container of the entry system data                                                                                             |
 
 ### Sys
 
-| Name | Type | Format | Description |
-| :------- | :--- | :----- | :---------- |
-| id | string | GUID | The entry identifier as a 128 bit GUID|
-| projectId | string | | The API identifier of the project the entry belongs to |
-| contentTypeId | string | | The API identifier of the content type that the entry is based on |
-| dataFormat | string | | Either *entry* or *asset* |
-| language | string | [Language code](/localization.md) | The language code of the entry variation |
-| uri | string | URI | The entry uri |
-| metadata | object | | Metadata associated with the entry instance |
-| version | object | [Version](/model/version.md) | Version info specific to the entry variation |
-
+| Name          | Type   | Format                            | Description                                                                                            |
+| :------------ | :----- | :-------------------------------- | :----------------------------------------------------------------------------------------------------- |
+| id            | string | GUID                              | The entry identifier as a 128 bit GUID                                                                 |
+| projectId     | string |                                   | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
+| contentTypeId | string |                                   | The API identifier of the content type that the entry is based on                                      |
+| dataFormat    | string |                                   | Either _entry_ or _asset_                                                                              |
+| language      | string | [Language code](/localization.md) | The language code of the entry variation                                                               |
+| uri           | string | URI                               | The entry uri                                                                                          |
+| metadata      | object |                                   | Metadata associated with the entry instance                                                            |
+| version       | object | [Version](/model/version.md)      | Version info specific to the entry variation                                                           |
 
 ## Example
 

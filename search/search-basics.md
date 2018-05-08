@@ -11,6 +11,7 @@ A query tree structure, along with order and paging specifiers, allows a search 
 * [Paging](#paging)
 * [Weighting](#weighting)
 * [Specifying fields](#specifying-fields)
+* [Limiting fields](#limiting-fields)
 * [Complete example](#complete-example)
 
 ```js

@@ -1,5 +1,5 @@
 ---
-description: The data format property is used as an extension of a data type to describe the structure and intent of the data.
+description: The data format property is used as an extension of a data type to describe the structure and intent of the data..
 ---
 # Data formats
 

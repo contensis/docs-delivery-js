@@ -101,7 +101,7 @@ query.orderBy = OrderBy.asc('title').desc('releaseDate');
 
 Paging allows the number of results to be restricted to a defined count so that the results are easier to handle and ensures a response is returned quickly. The page number can also be specified to allow which set of results is to be returned.
 
-The page number can also be specified to allow which set of results is to be returned.
+The page number can also be specified to allow which set of results is to be returned. The page size is limited to a maximum of 10,000 however this is not recommended.
 
 ```js
 query.pageSize = 50;

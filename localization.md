@@ -13,4 +13,4 @@ The language code is lowercased and if the country code is included, then it is 
 - Germany German is represented as **de-DE**
 
 ## Supported languages
-Contensis currently supports a subset of [language codes](https://zenhub.zengenti.com/Contensis/9/kb/content-types-and-entries/entries/multi-language-support.aspx) which can be set when creating a project, and enabled against a content type.
+Contensis currently supports a subset of [language codes](https://zenhub.zengenti.com/Contensis/11.1/kb/content-types-and-entries/entries/multi-language-support.aspx) which can be set when creating a project, and enabled against a content type.

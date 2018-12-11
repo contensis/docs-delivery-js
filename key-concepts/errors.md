@@ -20,7 +20,7 @@ Each response follows the same rules.
 
 | Name | Type | Format | Description |
 | :--- | :--- | :----- | :---------- |
-| logId | string | GUID | The logId as a 128 bit GUID.<br />This can be used within the Contensis [log viewer](https://zenhub.zengenti.com/Contensis/9/kb/Tools%20and%20utilities/log-viewer/Contensis-log-viewer-overview.aspx) to understand further details about the error |
+| logId | string | GUID | The logId as a 128 bit GUID.<br />This can be used within the Contensis [log viewer](https://zenhub.zengenti.com/Contensis/10.1/kb/Tools%20and%20utilities/log-viewer/Contensis-log-viewer-overview.aspx) to understand further details about the error |
 | message | string | | A description of the error |
 | data | any | | An object containing specific data relevant to the error |
 | type | string | | The type of error - for the Delivery API, this will always be *error* |

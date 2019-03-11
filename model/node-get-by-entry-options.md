@@ -1,10 +1,10 @@
 ---
-description: NodesGetByEntryOptions is a structure that is used to describe the options for requesting the nodes assigned to an entry.
+description: NodeGetByEntryOptions is a structure that is used to describe the options for requesting the nodes assigned to an entry.
 ---
 
-# NodesGetByEntryOptions
+# NodeGetByEntryOptions
 
-`NodesGetByEntryOptions` is a structure that is used to describe the options for requesting the nodes assigned to an entry.
+`NodeGetByEntryOptions` is a structure that is used to describe the options for requesting the nodes assigned to an entry.
 
 ## Properties
 

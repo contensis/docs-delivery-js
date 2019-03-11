@@ -5,21 +5,21 @@ description: Requesting nodes can be achieved by using one of the get methods.
 
 Requesting [nodes](/model/node.md) can be achieved by using one of the `get` methods.
 
-- [getRoot(options?: NodesGetRootOptions): Promise&lt;Node&gt;](#get-root)
-- [get(idOrPathOrOptions: string | NodesGetByIdOptions | NodesGetByPathOptions): Promise&lt;Node&gt;](#get-node)
-- [getByEntry(entryIdOrEntryOrOptions: string | Entry | NodesGetByEntryOptions): Promise<Node[]>](#get-nodes-by-entry)
-- [getChildren(idOrNodeOrOptions: string | Node | NodesGetChildrenOptions): Promise<Node[]>](#get-node-children)
-- [getParent(idOrNodeOrOptions: string | Node | NodesGetParentOptions): Promise&lt;Node&gt;](#get-node-parent)
-- [getAncestorAtLevel(idOrNodeOrOptions: string | Node | NodesGetAncestorAtLevelOptions): Promise&lt;Node&gt;](#get-node-ancestor-at-level)
-- [getAncestors(idOrNodeOrOptions: string | Node | NodesGetAncestorsOptions): Promise<Node[]>](#get-node-ancestors)
-- [getSiblings(idOrNodeOrOptions: string | Node | NodesGetSiblingOptions): Promise<Node[]>](#get-node-siblings)
+- [getRoot(options?: NodeGetRootOptions): Promise&lt;Node&gt;](#get-root)
+- [get(idOrPathOrOptions: string | NodeGetByIdOptions | NodeGetByPathOptions): Promise&lt;Node&gt;](#get-node)
+- [getByEntry(entryIdOrEntryOrOptions: string | Entry | NodeGetByEntryOptions): Promise<Node[]>](#get-nodes-by-entry)
+- [getChildren(idOrNodeOrOptions: string | Node | NodeGetChildrenOptions): Promise<Node[]>](#get-node-children)
+- [getParent(idOrNodeOrOptions: string | Node | NodeGetParentOptions): Promise&lt;Node&gt;](#get-node-parent)
+- [getAncestorAtLevel(idOrNodeOrOptions: string | Node | NodeGetAncestorAtLevelOptions): Promise&lt;Node&gt;](#get-node-ancestor-at-level)
+- [getAncestors(idOrNodeOrOptions: string | Node | NodeGetAncestorsOptions): Promise<Node[]>](#get-node-ancestors)
+- [getSiblings(idOrNodeOrOptions: string | Node | NodeGetSiblingOptions): Promise<Node[]>](#get-node-siblings)
 
 ## Get root
 Gets the root node of the tree.
 ### Parameters
 
 *options*
-> Type: [`NodesGetRootOptions`](/model/nodes-get-root-options.md)  
+> Type: [`NodeGetRootOptions`](/model/node-get-root-options.md)  
 > The options for requesting a root node. If the argument is not provided then the default option will be used.
 
 ### Examples
@@ -62,11 +62,11 @@ The *idOrPathOrOptions* parameter can be one of the following types.
 > The node id or the node path.
 
 *idOrPathOrOptions*
-> Type: [`NodesGetByIdOptions`](/model/nodes-get-by-id-options.md)
+> Type: [`NodeGetByIdOptions`](/model/node-get-by-id-options.md)
 > The options for requesting a node by id.
 
 *idOrPathOrOptions*
-> Type: [`NodesGetByPathOptions`](/model/nodes-get-by-path-options.md)
+> Type: [`NodeGetByPathOptions`](/model/node-get-by-path-options.md)
 > The options for requesting a node by path.
 
 ### Remarks
@@ -139,7 +139,7 @@ The *entryIdOrEntryOrOptions* parameter can be one of the following types.
 > The entry.
 
 *entryIdOrEntryOrOptions*
-> Type: [`NodesGetByEntryOptions`](/model/nodes-get-by-entry-options.md)  
+> Type: [`NodeGetByEntryOptions`](/model/node-get-by-entry-options.md)  
 > The options for requesting nodes assigned to an entry.
 
 ### Examples
@@ -213,7 +213,7 @@ The *idOrNodeOrOptions* parameter can be one of the following types.
 > The node.
 
 *idOrNodeOrOptions*
-> Type: [`NodesGetChildrenOptions`](/model/nodes-get-children-options.md)  
+> Type: [`NodeGetChildrenOptions`](/model/node-get-children-options.md)  
 > The options for requesting node children.
 
 ### Examples
@@ -284,7 +284,7 @@ The *idOrNodeOrOptions* parameter can be one of the following types.
 > The node.
 
 *idOrNodeOrOptions*
-> Type: [`NodesGetParentOptions`](/model/nodes-get-parent-options.md)  
+> Type: [`NodeGetParentOptions`](/model/node-get-parent-options.md)  
 > The options for requesting a node parent.
 
 ### Examples
@@ -346,7 +346,7 @@ Gets a node ancestor at a specified level.
 ### Parameters
 
 *options*
-> Type: [`NodesGetAncestorAtLevelOptions`](/model/nodes-get-ancestor-at-level-options.md)  
+> Type: [`NodeGetAncestorAtLevelOptions`](/model/node-get-ancestor-at-level-options.md)  
 > The options for requesting a node ancestor at a specified level.
 
 ### Remarks
@@ -410,7 +410,7 @@ The *idOrNodeOrOptions* parameter can be one of the following types.
 > The node.
 
 *idOrNodeOrOptions*
-> Type: [`NodesGetAncestorsOptions`](/model/nodes-get-ancestors-options.md)  
+> Type: [`NodeGetAncestorsOptions`](/model/node-get-ancestors-options.md)  
 > The options for requesting node ancestors.
 
 ### Remarks
@@ -488,7 +488,7 @@ The *idOrNodeOrOptions* parameter can be one of the following types.
 > The node.
 
 *idOrNodeOrOptions*
-> Type: [`NodesGetSiblingsOptions`](/model/nodes-get-siblings-options.md)  
+> Type: [`NodeGetSiblingsOptions`](/model/node-get-siblings-options.md)  
 > The options for requesting node siblings.
 
 ### Examples

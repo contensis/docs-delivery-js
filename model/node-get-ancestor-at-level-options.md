@@ -1,10 +1,10 @@
 ---
-description: NodesGetAncestorAtLevelOptions is a structure that is used to describe the options for requesting a node ancestor at a specified level.
+description: NodeGetAncestorAtLevelOptions is a structure that is used to describe the options for requesting a node ancestor at a specified level.
 ---
 
-# NodesGetAncestorAtLevelOptions
+# NodeGetAncestorAtLevelOptions
 
-`NodesGetAncestorAtLevelOptions` is a structure that is used to describe the options for requesting a node ancestor at a specified level.
+`NodeGetAncestorAtLevelOptions` is a structure that is used to describe the options for requesting a node ancestor at a specified level.
 
 ## Properties
 

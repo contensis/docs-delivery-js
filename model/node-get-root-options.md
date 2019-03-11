@@ -1,10 +1,10 @@
 ---
-description: NodesGetRootOptions is a structure that is used to describe the options for requesting a root node.
+description: NodeGetRootOptions is a structure that is used to describe the options for requesting a root node.
 ---
 
-# NodesGetRootOptions
+# NodeGetRootOptions
 
-`NodesGetRootOptions` is a structure that is used to describe the options for requesting a root node.
+`NodeGetRootOptions` is a structure that is used to describe the options for requesting a root node.
 
 ## Properties
 

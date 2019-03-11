@@ -5,12 +5,12 @@ description: Requesting nodes can be achieved by using one of the get methods.
 
 Requesting [nodes](/model/node.md) can be achieved by using one of the `get` methods.
 
-- [getRoot(options?: NodesGetRootOptions): Promise<Node>](#get-root)
-- [get(idOrPathOrOptions: string | NodesGetByIdOptions | NodesGetByPathOptions): Promise<Node>](#get-node)
+- [getRoot(options?: NodesGetRootOptions): Promise&lt;Node&gt;](#get-root)
+- [get(idOrPathOrOptions: string | NodesGetByIdOptions | NodesGetByPathOptions): Promise&lt;Node&gt;](#get-node)
 - [getByEntry(entryIdOrEntryOrOptions: string | Entry | NodesGetByEntryOptions): Promise<Node[]>](#get-nodes-by-entry)
 - [getChildren(idOrNodeOrOptions: string | Node | NodesGetChildrenOptions): Promise<Node[]>](#get-node-children)
-- [getParent(idOrNodeOrOptions: string | Node | NodesGetParentOptions): Promise<Node>](#get-node-parent)
-- [getAncestorAtLevel(idOrNodeOrOptions: string | Node | NodesGetAncestorAtLevelOptions): Promise<Node>](#get-node-ancestor-at-level)
+- [getParent(idOrNodeOrOptions: string | Node | NodesGetParentOptions): Promise&lt;Node&gt;](#get-node-parent)
+- [getAncestorAtLevel(idOrNodeOrOptions: string | Node | NodesGetAncestorAtLevelOptions): Promise&lt;Node&gt;](#get-node-ancestor-at-level)
 - [getAncestors(idOrNodeOrOptions: string | Node | NodesGetAncestorsOptions): Promise<Node[]>](#get-node-ancestors)
 - [getSiblings(idOrNodeOrOptions: string | Node | NodesGetSiblingOptions): Promise<Node[]>](#get-node-siblings)
 

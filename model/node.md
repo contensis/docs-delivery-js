@@ -12,11 +12,10 @@ A Node represents a location within the navigational structure of a website. The
 | :--- | :--- | :---------- |
 | id | `string` | The node identifier |
 | projectId | `string` | The API identifer of the project the node belongs to |
-| title | `string` | The node title |
 | slug | `string` | The node slug |
+| title | `string` | The node title |
 | path | `string` | The node path, e.g. "/movies/action/taken" |
 | parentId? | `string` | The parent node identifier. If the node is the root node then it will be _null_ |
 | language | `string` | The language the node represents |
-| entryId? | `string` | The optionally assigned entry identifier |
-| entry? |  [`Entry`](entry.md) | The optionally assigned entry |
+| entryId? | `string` | The optionally assigned [entry](entry.md) identifier |
 | childCount | `number` | The count of child nodes |

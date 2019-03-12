@@ -11,9 +11,11 @@ The API is a RESTful service to ensure maximum compatibility, delivering content
 
 ## Key concepts
 
-- [GET a single project](/key-concepts/get-project.md)
-- [GET a single content type](/key-concepts/get-contenttype.md)
-- [GET a single entry](/key-concepts/get-entry.md)
-- [GET list of all entries](/key-concepts/list-entries.md)
-- [GET list of entries by content type](/key-concepts/list-entries-by-content-type.md)
+- [Get a single project](/key-concepts/get-project.md)
+- [Get a single content type](/key-concepts/get-contenttype.md)
+- [Get a single entry](/key-concepts/get-entry.md)
+- [Get list of all entries](/key-concepts/list-entries.md)
+- [Get list of entries by content type](/key-concepts/list-entries-by-content-type.md)
 - [Search for entries](/search/search-basics.md)
+- [Search for entries](/search/search-basics.md)
+- [Getting nodes](/key-concepts/get-nodes.md)

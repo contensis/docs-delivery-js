@@ -236,7 +236,7 @@ The *idOrNodeOrOptions* parameter can be one of the following types.
         title: 'Toy Story',
         path: '/en-GB/movies/1995/toy-story'    
     };     
-    client.nodes.getChildren(entry).then(function(nodes) {
+    client.nodes.getChildren(node).then(function(nodes) {
         // the node children are available
     }, function(error) {
         console.error(error);

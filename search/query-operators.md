@@ -15,6 +15,7 @@
 - [LessThan](#lessthan)
 - [LessThanOrEqualTo](#lessthanorequalto)
 - [StartsWith](#startswith)
+- [DistanceWithin](#distancewithin)
 
 ## Logical operators
 
@@ -132,8 +133,6 @@ var query = new Query(
 );
 ```
 
-
-
 ### GreaterThan
 In the example any item that has a field called *first* and a value that is greater than *7* would be returned.
 
@@ -142,8 +141,6 @@ var query = new Query(
   Op.greaterThan('first', 7)
 );
 ```
-
-
 
 ### GreaterThanOrEqualTo
 In the example any item that has a field called *first* and a value that is greater than or equal to *7* would be returned.
@@ -154,8 +151,6 @@ var query = new Query(
 );
 ```
 
-
-
 ### In
 In the example any document that where the field *first* is equal to *1*,*7* or *11* would be returned. The values should be of the same type, in this case *integer*.
 
@@ -164,8 +159,6 @@ var query = new Query(
   Op.in('first', 1, 7, 11)
 );
 ```
-
-
 
 ### LessThan
 In the example any item that has a field called *first* and a value that is less than *7* would be returned.
@@ -176,8 +169,6 @@ var query = new Query(
 );
 ```
 
-
-
 ### LessThanOrEqualTo
 In the example any item that has a field called *first* and a value that is less than or equal to *7* would be returned.
 
@@ -187,13 +178,20 @@ var query = new Query(
 );
 ```
 
-
-
 ### StartsWith
 In the example if the *name* field contains a value starting with *war* it would match.
 
 ```js
 var query = new Query(
   Op.startsWith('name', 'war')
+);
+```
+
+### DistanceWithin
+In the example any locations within a 10 mile radius of the specified location would match.
+
+```js
+var query = new Query(
+  Op.distanceWithin("location", 52.377, -2.749, "10mi"))
 );
 ```

@@ -7,6 +7,7 @@ A query tree structure, along with order and paging specifiers, allows a search 
 
 * [Query](#query)
 * [Sub-queries](#sub-queries)
+* [Location searches](#location-searches)
 * [Ordering](#ordering)
 * [Paging](#paging)
 * [Weighting](#weighting)
@@ -63,6 +64,35 @@ var query = new Query(
         Op.greaterThan('releaseDate', 1960),
         Op.contains('tagline', 'gotham')
     )
+);
+```
+
+## Location searches
+
+Search for locations within a radius of a specified location.
+
+### Supported distance units
+
+| Unit          | Search value                   |
+|---------------|--------------------------------|
+| Mile          | `mi` or `miles`                |
+| Yard          | `yd` or `yards`                |
+| Feet          | `ft` or `feet`                 |
+| Inch          | `in` or `inch`                 |
+| Kilometer     | `km` or `kilometers`           |
+| Meter         | `m` or `meters`                |
+| Centimeter    | `cm` or `centimeters`          |
+| Millimeter    | `mm` or `millimeters`          |
+| Nautical mile | `NM`, `nmi` or `nauticalmiles` |
+
+### Example
+
+Find all entries which have a location within 10.5 miles of Ludlow Castle's location.
+Append the search value at the end of the distance specified, so for example "10.5mi" or "10.5miles".
+
+```js
+var query = new Query(
+  Op.distanceWithin("location", 52.377, -2.749, "10mi"))
 );
 ```
 

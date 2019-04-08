@@ -17,5 +17,4 @@ The API is a RESTful service to ensure maximum compatibility, delivering content
 - [Get list of all entries](/key-concepts/list-entries.md)
 - [Get list of entries by content type](/key-concepts/list-entries-by-content-type.md)
 - [Search for entries](/search/search-basics.md)
-- [Search for entries](/search/search-basics.md)
 - [Getting nodes](/key-concepts/get-nodes.md)

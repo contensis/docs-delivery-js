@@ -13,6 +13,8 @@ A query tree structure, along with order and paging specifiers, allows a search 
 * [Weighting](#weighting)
 * [Specifying fields](#specifying-fields)
 * [Limiting fields](#limiting-fields)
+* [Ordering by distance](#ordering-by-distance)
+* [Limiting fields](#limiting-fields)
 * [Complete example](#complete-example)
 
 ```js
@@ -95,6 +97,8 @@ var query = new Query(
   Op.distanceWithin("location", 52.377, -2.749, "10mi"))
 );
 ```
+
+When searching for a location field, you can also [order the results by distance](#ordering-by-distance).
 
 ## Ordering
 
@@ -187,10 +191,23 @@ var query = new Query(
 ```
 
 ## Limiting fields
+
 The fields returned in entries can be limited to reduce the payload. Any fields specified are carried over into linked entries if specifying a linkDepth.
 
 ```js
 query.fields = ['entryTitle', 'description'];
+```
+
+## Ordering by distance
+
+When [searching by location](#location-searches), to return the search results according to the distance of the location field in each entry from the distance specified in the distanceWithin search, add the location field to the [orderBy](#ordering) clause, e.g.
+
+```js
+var query = new Query(
+  Op.distanceWithin("location", 52.377, -2.749, "10mi"))
+);
+var OrderBy = Zengenti.Contensis.OrderBy;
+query.orderBy = OrderBy.asc('location');
 ```
 
 ## Complete example

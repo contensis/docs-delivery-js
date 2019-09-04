@@ -11,7 +11,7 @@ A structure that supports multiple configuration options for resolving taxonomy 
 | :------- | :----- | :---------- |
 | key | string | The taxonomy node key |
 | node | [TaxonomyNode](/model/taxonomy-node.md) | The taxonomy node |
-| order | string | Specifies the order of taxonomy nodes: 'defined' or 'alphabetical' (defaults to 'defined') |
+| order | string | Specifies the order of taxonomy nodes: 'defined' or 'alphabetical' (defaults to 'alphabetical') |
 | childDepth | number | The depth of resolved children (defaults to 1) |
 | language | string | The language code for the retrieved taxonomy nodes |
 
@@ -22,12 +22,12 @@ A structure that supports multiple configuration options for resolving taxonomy 
 
     var client = Zengenti.Contensis.Client.create();    
 
-    client.taxonomy.resolveChildren({ key: '0/1', order: 'alphabetical', childDepth: 10, language: 'fr-FR' }).then(node => {        
-        console.log("Taxonomy resolveChildren with options and takonomy node key:");
+    client.taxonomy.resolveChildren({ key: '0/1', order: 'defined', childDepth: 10, language: 'fr-FR' }).then(node => {        
+        console.log("Taxonomy resolveChildren with options and taxonomy node key:");
         console.log(node);
     });
 
-    client.taxonomy.resolveChildren({ node: { key: '0/1', name: '', path: '', hasChildren: true }, order: 'alphabetical', childDepth: 99, language: 'fr-FR' }).then(node => {        
+    client.taxonomy.resolveChildren({ node: { key: '0/1', name: '', path: '', hasChildren: true }, order: 'defined', childDepth: 99, language: 'fr-FR' }).then(node => {        
         console.log("Taxonomy resolveChildren with options and taxonomy node:");
         console.log(node);
     });

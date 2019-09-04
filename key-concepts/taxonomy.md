@@ -3,7 +3,7 @@ description: Taxonomy nodes can be retrieved using the following methods, either
 ---
 # Taxonomy
 
-Taxonomy nodes can be retrieved using the following methods, either by key or by path. The localization can be included as a parameter to determine the language the nodes should be returned as. The order by default is set to 'Defined', which is the order set in the UI, but an order of 'Alphabetical' can also be set. 
+Taxonomy nodes can be retrieved using the following methods, either by key or by path. The localization can be included as a parameter to determine the language the nodes should be returned as. The order by default is set to 'alphabetical', but an order of 'defined' (which is the order set in the UI) can also be used. 
 
 The childDepth parameter is used to reduce the number of service calls if child and descendant nodes are being iterated, which will potentially increase performance.
 
@@ -25,7 +25,7 @@ getNodeByKey(key: string | TaxonomyGetNodeByKeyOptions): Promise<TaxonomyNode>
 
 *key*
 > Type: `string`
-> The key for the taxonomy, which is a forward-slash delimitered set of integer values, e.g. 0/2/734 
+> The key for the taxonomy, which is a forward-slash delimited set of integer values, e.g. 0/2/734 
 
 or 
 
@@ -74,7 +74,7 @@ getNodeByPath(path: string | TaxonomyGetNodeByPathOptions): Promise <TaxonomyNod
 
 *path*
 > Type: `string`  
-> The path for the taxonomy, which is a forward-slash delimitered set of string values, e.g. "Root/Movies/Genres/Comedy" 
+> The path for the taxonomy, which is a forward-slash delimited set of string values, e.g. "Root/Movies/Genres/Comedy" 
 
 or 
 
@@ -123,7 +123,7 @@ resolveChildren(node: string | TaxonomyNode | TaxonomyResolveChildrenOptions): P
 
 *node*
 > Type: `string`
-> The key for the taxonomy, which is a forward-slash delimitered set of integer values, e.g. 0/2/734 
+> The key for the taxonomy, which is a forward-slash delimited set of integer values, e.g. 0/2/734 
 
 or 
 
@@ -154,12 +154,12 @@ or
         console.log(node);
     });
 
-    client.taxonomy.resolveChildren({ key: '0/1', order: 'alphabetical', childDepth: 10, language: 'fr-FR' }).then(node => {        
-        console.log("Taxonomy resolveChildren with options and takonomy node key:");
+    client.taxonomy.resolveChildren({ key: '0/1', order: 'defined', childDepth: 10, language: 'fr-FR' }).then(node => {        
+        console.log("Taxonomy resolveChildren with options and taxonomy node key:");
         console.log(node);
     });
 
-    client.taxonomy.resolveChildren({ node: { key: '0/1', name: '', path: '', hasChildren: true }, order: 'alphabetical', childDepth: 99, language: 'fr-FR' }).then(node => {        
+    client.taxonomy.resolveChildren({ node: { key: '0/1', name: '', path: '', hasChildren: true }, order: 'defined', childDepth: 99, language: 'fr-FR' }).then(node => {        
         console.log("Taxonomy resolveChildren with options and taxonomy node:");
         console.log(node);
     });

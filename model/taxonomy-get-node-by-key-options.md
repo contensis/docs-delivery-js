@@ -10,7 +10,7 @@ A structure that supports multiple configuration options for requesting taxonomy
 | Name | Type |  Description |
 | :------- | :----- | :---------- |
 | key | string | The taxonomy node key |
-| order | string | Specifies the order of taxonomy nodes: 'defined' or 'alphabetical' (defaults to 'defined') |
+| order | string | Specifies the order of taxonomy nodes: 'defined' or 'alphabetical' (defaults to 'alphabetical') |
 | childDepth | number | The depth of resolved children (defaults to 1) |
 | language | string | The language code for the retrieved taxonomy nodes |
 

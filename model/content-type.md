@@ -21,7 +21,7 @@ A content type resource can be retrieved from the Delivery API to understand the
 | supportedLanguages | string [...] | [Language code](/localization.md)   |                                                                                                        |
 | workflowId         | string       |                                     | The workflow that derived entries will                                                                 |
 | dataFormat         | string       |                                     | Either _entry_ or _asset_                                                                              |
-| previewUrl         | string       |                                     | The url that an example of an entry based on the content type can be viewed                            |
+| previewUrl         | string       |                                     | The URL where an example of an entry based on the content type can be viewed                            |
 | version            | object       | [Version](/model/version.md)        | Version information about the content type                                                             |
 
 ## Field

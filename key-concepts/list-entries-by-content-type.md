@@ -1,7 +1,7 @@
 ---
 description: Requesting all entries for a content type can be achieved by using the list method on the client's entries property.
 ---
-# Get a list entries by content type
+# List entries by content type
 Requesting all entries for a content type can be achieved by using the list method on the client's entries property.
 
 **list(contentTypeId: string): Promise&lt;PagedList&lt;Entry&gt;&gt;**

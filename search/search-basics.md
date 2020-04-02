@@ -192,7 +192,7 @@ var query = new Query(
 
 ## Limiting fields
 
-The fields returned in entries can be limited to reduce the payload. Any fields specified are carried over into linked entries if specifying a linkDepth.
+If you have large entries and only require a subset of fields it is worth limiting the fields returned in the results. This will reduce the size of the payload from the API which in turn will improve performance. You can include fields by specifiying the field API ID or you can exclude fields by prefixing the field API ID with a -. Field limiting also applies to linked entries when specifying a linkDepth.
 
 ```js
 query.fields = ['entryTitle', 'description'];

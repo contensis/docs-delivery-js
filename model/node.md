@@ -1,5 +1,5 @@
 ---
-description: The Node class represents  a location within the navigational structure of a website.
+description: The Node class represents a location within the navigational structure of a website.
 ---
 
 # Node
@@ -8,14 +8,18 @@ A Node represents a location within the navigational structure of a website. The
 
 ## Properties
 
-| Name | Type | Description |
-| :--- | :--- | :---------- |
-| id | `string` | The node identifier |
-| projectId | `string` | The API identifer of the project the node belongs to |
-| slug | `string` | The node slug |
-| title | `string` | The node title |
-| path | `string` | The node path, e.g. "/movies/action/taken" |
-| parentId? | `string` | The parent node identifier. If the node is the root node then it will be _null_ |
-| language | `string` | The language the node represents |
-| entryId? | `string` | The optionally assigned [entry](entry.md) identifier |
-| childCount | `number` | The count of child nodes |
+| Name              | Type      | Description                                                                                                                      |
+|-------------------|-----------|----------------------------------------------------------------------------------------------------------------------------------|
+| id                | `string`  | The node identifier                                                                                                              |
+| parentId          | `string`  | The node's parent identifier                                                                                                     |
+| projectId         | `string`  | The project identifier, e.g. 'movieDb'. Found in the project overview screen of the management console                           |
+| slug              | `string`  | The slug of the node, unique within it's containing node, e.g. 'about-us'                                                        |
+| displayName       | `string`  | The node slug display name                                                                                                       |
+| language          | `string`  | The node language                                                                                                                |
+| path              | `string`  | The path the node is navigable on                                                                                                |
+| childCount        | `integer` | The count of child nodes                                                                                                         |
+| children          | `node[]`  | If a depth is specified when requesting a node then the children field would include the descendant nodes to the specified depth |
+| entry             | `entry`   | The entry associated with the node, if requested                                                                                 |
+| isCanonical       | `boolean` | Whether this node is the canonical node for the entry                                                                            |
+| version.versionNo | `string`  | The version number of the node                                                                                                   |
+| includeInMenu     | `boolean` | 'true' if the node should be included in menus; Does not stop the node from being navigable.                                     |

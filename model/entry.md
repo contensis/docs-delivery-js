@@ -22,16 +22,22 @@ These are the standard properties that all entries have. The language property i
 
 ### Sys
 
-| Name          | Type   | Format                            | Description                                                                                            |
-| :------------ | :----- | :-------------------------------- | :----------------------------------------------------------------------------------------------------- |
-| id            | string | GUID                              | The entry identifier as a 128 bit GUID                                                                 |
-| projectId     | string |                                   | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
-| contentTypeId | string |                                   | The API identifier of the content type that the entry is based on                                      |
-| dataFormat    | string |                                   | Either _entry_ or _asset_                                                                              |
-| language      | string | [Language code](/localization.md) | The language code of the entry variation                                                               |
-| uri           | string | URI                               | The entry uri                                                                                          |
-| metadata      | object |                                   | Metadata associated with the entry instance                                                            |
-| version       | object | [Version](/model/version.md)      | Version info specific to the entry variation                                                           |
+| Name | Type | Format | Description |
+| :- | :- | :- | :- |
+| id | string | GUID | The entry identifier as a 128 bit GUID |
+| projectId | string | | The project identifier, e.g. "movieDb". Found in the project overview screen of the management console |
+| contentTypeId | string | | The API identifier of the content type that the entry is based on |
+| dataFormat | string | | Either _entry_ or _asset_ |
+| language | string | [Language code](/localization.md) | The language code of the entry variation |
+| availableLanguages | string[] | [Language code](/localization.md) | A list languages which have available translations. |
+| uri | string | URI | The entry uri |
+| allUris | string[] | URI | All uris associated with the entry |
+| metadata | object | | Metadata associated with the entry instance |
+| workflow | object | | Workflow associated with the entry instance. |
+| workflow.id | string | | The API identifier of the workflow that the entry is using. |
+| workflow.state | string | | The API identifier of the current workflow state of the entry. |
+| isPublished | boolean | | If the entry is currently published then the value will be _true_. If the entry has yet to be published or has been unpublished it will be _false_. |
+| version | object | [Version](/model/version.md) | Version info specific to the entry variation |
 
 ## Example
 
